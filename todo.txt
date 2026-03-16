@@ -1,0 +1,5 @@
+hacer clase abstracta, funcion de dispersion<key>
+hacer clase abstracta, estrategia de exproracion<key>
+hacer clase generica key con template para que pueda ser un numero o un nif
+hacer clase generica abstracta
+

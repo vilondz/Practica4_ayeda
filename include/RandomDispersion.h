@@ -10,6 +10,6 @@ class RandomDispersion : public DispersionFunction<Key> {
 
   unsigned operator()(const Key& k) const override {
     srand(k);
-    return rand() % tableSize_;
+    return rand();
   }
 };

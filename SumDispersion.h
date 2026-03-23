@@ -1,16 +1,19 @@
-template <typename Key>
-class SumDispersion : public DispersionFunction<Key> {
+#include "DispersionFunction.h"
+#pragma once
+template <typename key>
+class SumDispersion : public DispersionFunction<key> {
  private:
-  unsigned tableSize_;
 
  public:
-  SumDispersion(unsigned tableSize) : tableSize_(tableSize) {}
+  SumDispersion(unsigned tableSize) : DispersionFunction<key>(tableSize){};
 
-  unsigned operator()(const Key& k) const override {
+  unsigned operator()(const key& k) const override {
     unsigned sum = 0;
-    for (auto c : k) {
-      sum += static_cast<unsigned>(c);
+    unsigned n = k; 
+    while (n > 0) {
+        sum += n % 10; 
+        n /= 10;       
     }
-    return sum % tableSize_;
+    return sum % this->get_tablesize();
   }
 };

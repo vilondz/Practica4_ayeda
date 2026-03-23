@@ -1,5 +1,5 @@
 #include "ExplorationFunction.h"
-
+#pragma once
 template <typename key> 
 class CuadraticExploration : public ExplorationFunction<key> {
   private:

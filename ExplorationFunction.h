@@ -1,4 +1,5 @@
 template <typename key> 
+#pragma once
 class ExplorationFunction {
   private:
 

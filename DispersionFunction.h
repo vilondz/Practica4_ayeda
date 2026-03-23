@@ -1,4 +1,5 @@
-#include "hashtable.h"
+
+#pragma once
 template <typename key> 
 class DispersionFunction{
   private:
@@ -8,7 +9,7 @@ class DispersionFunction{
       tablesize_ = tz;
     }
     virtual unsigned operator()(const key&) const = 0;
-    int get_tablesize(void){return tablesize_;}
+    unsigned get_tablesize() const {return tablesize_;}
     void set_tablesize(int tz){tablesize_ = tz;}
 };
 

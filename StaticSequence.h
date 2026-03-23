@@ -17,6 +17,7 @@ class StaticSequence : public Sequence<key>{
 
 template <typename key>
 bool StaticSequence<key>::insert(const key& k){
+	std::cout << "bloque " << k << std::endl;
 	if(!isFull()){
 		block_.insert(block_.begin(), k);
 		return true;
@@ -42,7 +43,8 @@ bool StaticSequence<key>::isFull(void)const {
 
 template<typename key>
 void StaticSequence<key>::print_block(){
-	for(auto aux : block_){
+	for(auto& aux : block_){
+		std::cout << "imprimiendo bloque" << std::endl;
 		std::cout << aux << " ";
 	}
 }

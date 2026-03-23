@@ -10,7 +10,7 @@ class RandomDispersion : public DispersionFunction<key> {
   RandomDispersion(unsigned tableSize) : DispersionFunction<key>(tableSize){};
 
   unsigned operator()(const key& k) const override {
-    srand(k);
+    srand(static_cast<long>(k));
     return rand();
   }
 };

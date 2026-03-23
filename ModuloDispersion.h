@@ -7,6 +7,6 @@ class ModuloDispersion : public DispersionFunction<key> {
   ModuloDispersion(int ts) : DispersionFunction<key>(ts) {}
 
   unsigned operator()(const key& k)const override {
-    return k % this->get_tablesize();
+    return static_cast<long>(k) % this->get_tablesize();
   }
 };

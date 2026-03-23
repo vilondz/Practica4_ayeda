@@ -36,6 +36,7 @@ HashTable<key, container>::HashTable(unsigned tablesize, DispersionFunction<key>
 }
 template <typename key, class container>
 bool HashTable<key, container>::insert(const key& k) {
+  std::cout << k << std::endl;
   bool insertado = false;
   unsigned intentos = 1;
   unsigned pos = fd_(k) % tablesize_;
@@ -123,7 +124,7 @@ public:
   }
   void print(){
     for(auto& aux : table_){
-      std::cout << aux->size();
+      aux->print_block();
       std::cout << std::endl;
     }
   }

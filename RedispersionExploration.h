@@ -7,7 +7,7 @@ class RedispersionExploration : public ExplorationFunction<key> {
 
   public:
     unsigned operator()(const key& k, unsigned i) const override{
-      srand(k);
+      srand(static_cast<long>(k));
       unsigned numero= 0;
       for(int k = 0; k < i; k++){
         numero = rand();

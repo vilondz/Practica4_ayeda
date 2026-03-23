@@ -2,8 +2,5 @@ cmake_minimum_required(VERSION 3.10)
 
 project(practica4)
 
-file(GLOB SOURCES "*.cc")
 
-add_executable(practica4 ${SOURCES})
-
-target_include_directories(mi_programa PRIVATE ./include)
+add_executable(practica4 main.cc CuadraticExploration.h DinamicSecuence.h DispersionFunction.h DobleDispersionExploration.h ExplorationFunction.h HashTable.h LinealExploration.h ModuloDispersion.h RandomDispersion.h RedispersionExploration.h Sequence.h StaticSequence.h SumDispersion.h)

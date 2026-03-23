@@ -1,9 +1,5 @@
-hacer clase abstracta, funcion de dispersion<key>
-hacer clase abstracta, estrategia de exproracion<key>
-hacer clase generica key con template para que pueda ser un numero o un nif
-hacer clase generica abstracta
-
-//importante para la key
-Una opción inmediata para estos casos es usar los valores ASCII de 
-los caracteres para obtener una cantidad numérica, por ejemplo 
-sumándolos, a la que se le aplica una operación aritmética.
+./practica4 -ts 5 -fd 3 -hash open -bs 2 -fe 4
+./practica4 -ts 17 -fd 2 -hash close -bs 1 -fe 3
+./practica4 -ts 17 -fd 1 -hash close -bs 1 -fe 2
+./practica4 -ts 11 -fd 2 -hash close -bs 3 -fe 1
+./practica4 -ts 3 -fd 1 -hash open 
